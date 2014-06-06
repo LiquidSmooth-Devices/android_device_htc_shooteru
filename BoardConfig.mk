@@ -43,7 +43,7 @@ TARGET_HARDWARE_3D := true
 TARGET_KERNEL_SOURCE := kernel/htc/shooter
 TARGET_KERNEL_CONFIG := shooter_u_defconfig
 
-TARGET_GCC_VERSION_ARM := 4.8-sm
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.10-sm
 TARGET_GCC_VERSION_AND := 4.8-sm
 
 # Camera
