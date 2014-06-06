@@ -56,6 +56,9 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 #ION
 TARGET_USES_ION := true
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard0
+
 # Bluetooth/Wifi
 -include device/htc/msm8660-common/bcmdhd.mk
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/shooteru/bluetooth
