@@ -133,6 +133,10 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
 PRODUCT_PACKAGES += \
     Torch
 
+# DeviceSettings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
