@@ -18,7 +18,7 @@ public class ColorTemp {
     public static boolean isEnabled() {
         if (!isSupported())
             return false;
-        return Utils.readOneLine(FILE).equals("1");
+        return Utils.readOneLine(FILE).equals("Y");
     }
 
     public static void restore(Context context) {
@@ -26,15 +26,15 @@ public class ColorTemp {
             return;
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         if (sharedPrefs.getBoolean(DevicePreferenceActivity.KEY_COLOR_TEMP, false))
-            Utils.writeValue(FILE, "1");
+            Utils.writeValue(FILE, "Y");
         else
-            Utils.writeValue(FILE, "0");
+            Utils.writeValue(FILE, "N");
     }
 
     public static void enable(Context context) {
         if (!isSupported())
             return;
-        Utils.writeValue(FILE, "1");
+        Utils.writeValue(FILE, "Y");
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         editor.putBoolean(DevicePreferenceActivity.KEY_COLOR_TEMP, true);
@@ -44,7 +44,7 @@ public class ColorTemp {
     public static void disable(Context context) {
         if (!isSupported())
             return;
-        Utils.writeValue(FILE, "0");
+        Utils.writeValue(FILE, "N");
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         editor.putBoolean(DevicePreferenceActivity.KEY_COLOR_TEMP, false);
